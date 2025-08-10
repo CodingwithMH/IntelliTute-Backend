@@ -10,7 +10,7 @@ const app=express()
 app.use(cookieParser(process.env.COOKIE_SECRET_KEY));
 app.use(cors({
   methods:["GET","POST","DELETE","PUT"],
-  origin:"http://localhost:5173",
+  origin:"https://intellitute.netlify.app",
   credentials:true
 }))
 app.use(express.json())
