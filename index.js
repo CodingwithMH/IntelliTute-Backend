@@ -17,7 +17,7 @@ app.use(express.json())
 const port = process.env.PORT || 5000;
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 app.use('/api/auth',require("./routes/auth"))
-app.post('/',(req,res)=>{
+app.get('/',(req,res)=>{
   res.send("Hello world")
 })
 app.post("/ask",async (req,res)=>{
