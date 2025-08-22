@@ -9,8 +9,8 @@ connectToMongo()
 const app=express()
 app.use(cookieParser(process.env.COOKIE_SECRET_KEY));
 app.use(cors({
-  methods:["GET","POST","DELETE","PUT"],
   origin:"https://intellitute.netlify.app",
+  methods:["GET","POST","DELETE","PUT"],
   credentials:true
 }))
 app.use(express.json())
